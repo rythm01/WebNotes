@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileSaver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <textarea name="text" id="01" cols="30" rows="8" required placeholder="Enter something..."></textarea>
+        <div class="file-options">
+            <div class="option file-name">
+                <label for="2">File-Name:</label>
+                <input id="2" type="text" placeholder="Enter name of file">
+            </div>
+            <div class="option file-type">
+                <label for="">Save as:</label>
+                <div class="select-menu" style="
+                background-color: #fff;">
+                <select name="type" id="3">
+                    <option value="text/plain">text-file(.txt)</option>
+                    <option value="application/msword">Document-file(.doc)</option>
+                    <option value="text/javascript">JS-file(.js)</option>
+                    <option value="text/html">HTML-file(.html)</option>
+                </select>
+                </div>
+            </div>
+        </div>
+        <div class="final-btn">
+            <button class="save">SAVE</button>
+            <button class="reset">RESET</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:  #7236e3;
+}
+.wrapper{
+    width: 450px;
+    background-color: floralwhite;
+    border-radius: 7px;
+    padding: 30px 25px 40px;
+}
+.wrapper :where(textarea,input,select,button){
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.wrapper textarea{
+    height: 270px;
+    resize: none;
+    padding: 9px 13px;
+    border: 1px solid #ccc;
+}
+.wrapper .file-options{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.file-options .option{
+    width: calc(100% / 2  - 8px);
+}
+.option :where(input,.select-menu){
+    height: 50px;
+    padding: 10px 15px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border:1px solid #bfbfbf;
+}
+.opetion .select-menu select{
+    height: 50px;
+}
+.wrapper .final-btn button{
+    color: #fff;
+    margin-top: 20px;
+    padding: 16px 0;
+    cursor: pointer;
+}
+.save{
+    background: lime;
+}
+.reset{
+    background: red;
+}
