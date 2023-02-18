@@ -16,7 +16,17 @@ saveBtn.addEventListener("click",()=>{
     return;
   }
   //blob(value,type)//Underlying data structure for the file object and the filereader API
-  let blob = new Blob([textArea.value], {type: fileType.value});
+  // let blob = new Blob([textArea.value], {type: fileType.value});
+
+  // Get the text entered in the input field
+  const text = textArea.value;
+
+  // Encode the text using HTML entities
+  const encodedText = new Option(text).innerHTML;
+  
+  
+  // Create a new Blob object from the HTML content
+  const blob = new Blob([encodedText], {type: fileType.value});
   //URL.createObjectURL create url that represent passed object
   let fileURL = URL.createObjectURL(blob); // creating url of raw data of blob object
   let link = document.createElement("a");//creating <a> 
@@ -25,6 +35,7 @@ saveBtn.addEventListener("click",()=>{
   link.click();//clicking link so the file download
   saveBtn.style.background = 'darkgreen';
 })
+
 resetBtn.addEventListener("click",() => {
    textArea.value = "";
    fileInput.value = "";
